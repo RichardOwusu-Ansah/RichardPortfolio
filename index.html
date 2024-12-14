@@ -26,6 +26,7 @@
             background-color: var(--bg-color);
         }
 
+        /* Navigation */
         .navbar {
             background-color: var(--card-bg);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -64,6 +65,7 @@
             background-color: var(--primary-color);
         }
 
+        /* Hero Section */
         .hero {
             padding: 8rem 2rem 4rem;
             text-align: center;
@@ -89,6 +91,7 @@
             opacity: 0.9;
         }
 
+        /* Main Content */
         .content {
             max-width: 1200px;
             margin: 0 auto;
@@ -120,6 +123,7 @@
             }
         }
 
+        /* Maps Section */
         .maps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -179,8 +183,10 @@
             border: none;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 1rem;
         }
 
+        /* Section Headings */
         h2 {
             color: var(--primary-color);
             font-size: 2rem;
@@ -189,6 +195,7 @@
             border-bottom: 2px solid var(--primary-color);
         }
 
+        /* Additional Sections Styling */
         .education-item, .research-item {
             margin-bottom: 2rem;
             padding-bottom: 2rem;
@@ -217,6 +224,7 @@
             margin-bottom: 1rem;
         }
 
+        /* Contact Section */
         .contact {
             text-align: center;
         }
@@ -230,6 +238,7 @@
             text-decoration: underline;
         }
 
+        /* Footer */
         footer {
             background-color: var(--text-color);
             color: white;
@@ -238,6 +247,7 @@
             margin-top: 4rem;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 flex-wrap: wrap;
@@ -280,15 +290,17 @@
     </section>
 
     <main class="content">
+        <!-- About Section -->
         <section id="about" class="section active">
             <h2>About Me</h2>
             <div class="about-content">
-                <p>I am Richard Owusu-Ansah, a Geographer, Geospatial Data Scientist, and Researcher pursuing a Master of Science in Geography and Environment at The George Washington University. My research focuses on environmental predictive modeling, urban heat islands, carbon dynamics, and flood risk assessment, utilizing GIS and geospatial programming to analyze environmental challenges and inform sustainable solutions.</p>
-                <p>With expertise in Python, ArcGIS, QGIS, and geospatial analysis, I have worked on projects exploring land cover change, illegal mining impacts, and climate change adaptation strategies. I am particularly interested in using spatial models to better understand the interactions between urban environments, carbon emissions, and climate risks, aiming to enhance urban resilience to environmental stressors.</p>
-                <p>Currently, I serve as a Graduate Teaching Assistant, facilitating Physical Geography lab sessions at The George Washington University, helping students understand key geographical concepts through hands-on learning and practical exercises.</p>
+                <p>I am <strong>Richard Owusu-Ansah</strong>, a <strong>Geographer</strong>, <strong>Geospatial Data Scientist</strong>, and <strong>Researcher</strong> currently pursuing a Master of Science in <strong>Geography and Environment</strong> at <strong>The George Washington University</strong>. My research focuses on <strong>environmental predictive modeling</strong>, <strong>urban heat islands</strong>, <strong>carbon dynamics</strong>, and <strong>flood risk assessment</strong>, utilizing <strong>GIS</strong> and <strong>geospatial programming</strong> to analyze environmental challenges and inform sustainable solutions.</p>
+                <p>With expertise in <strong>Python</strong>, <strong>ArcGIS</strong>, <strong>QGIS</strong>, and <strong>geospatial analysis</strong>, I have worked on projects exploring <strong>land cover change</strong>, <strong>illegal mining impacts</strong>, and <strong>climate change adaptation</strong> strategies. I am particularly interested in using <strong>spatial models</strong> to better understand the interactions between urban environments, <strong>carbon emissions</strong>, and <strong>climate risks</strong>, aiming to enhance urban resilience to environmental stressors.</p>
+                <p>Currently, as a <strong>Graduate Teaching Assistant</strong>, I facilitate <strong>Physical Geography lab sessions</strong> at <strong>The George Washington University</strong>, helping students understand key geographical concepts through hands-on learning and practical exercises.</p>
             </div>
         </section>
 
+        <!-- Education Section -->
         <section id="education" class="section">
             <h2>Education</h2>
             <div class="education-item">
@@ -305,6 +317,7 @@
             </div>
         </section>
 
+        <!-- Research Section -->
         <section id="research" class="section">
             <h2>Research Experience</h2>
             <div class="research-item">
@@ -328,11 +341,12 @@
             </div>
         </section>
 
+        <!-- Maps Section -->
         <section id="maps" class="section">
             <h2>Maps & GIS Projects</h2>
             <div class="maps-grid">
                 <div class="map-card">
-                    <img src="/api/placeholder/400/300" alt="Black Bear Distribution Map">
+                    <img src="images/Map1.jpg" alt="Black Bear Distribution Map">
                     <div class="map-info">
                         <h3>Black Bear Current Distribution</h3>
                         <p>A detailed analysis and visualization of current Black Bear distribution patterns across various regions.</p>
@@ -345,7 +359,7 @@
                 </div>
 
                 <div class="map-card">
-                    <img src="/api/placeholder/400/300" alt="Greater Sage-Grouse Distribution Map">
+                    <img src="images/Map2.jpg" alt="Greater Sage-Grouse Distribution Map">
                     <div class="map-info">
                         <h3>Greater Sage-Grouse Distribution</h3>
                         <p>Spatial analysis showing the current distribution of Greater Sage-Grouse populations and their habitats.</p>
@@ -368,6 +382,7 @@
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="section">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
@@ -390,6 +405,7 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="section">
             <h2>Get in Touch</h2>
             <p>Email: <a href="mailto:richard.owusuansah@gwmail.gwu.edu">richard.owusuansah@gwmail.gwu.edu</a></p>
@@ -421,4 +437,3 @@
     </script>
 </body>
 </html>
-        
