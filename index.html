@@ -26,7 +26,6 @@
             background-color: var(--bg-color);
         }
 
-        /* Navigation */
         .navbar {
             background-color: var(--card-bg);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -65,7 +64,6 @@
             background-color: var(--primary-color);
         }
 
-        /* Hero Section */
         .hero {
             padding: 8rem 2rem 4rem;
             text-align: center;
@@ -91,7 +89,6 @@
             opacity: 0.9;
         }
 
-        /* Main Content */
         .content {
             max-width: 1200px;
             margin: 0 auto;
@@ -123,7 +120,6 @@
             }
         }
 
-        /* Maps Section */
         .maps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -183,10 +179,8 @@
             border: none;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-top: 1rem;
         }
 
-        /* Section Headings */
         h2 {
             color: var(--primary-color);
             font-size: 2rem;
@@ -195,7 +189,6 @@
             border-bottom: 2px solid var(--primary-color);
         }
 
-        /* Additional Sections Styling */
         .education-item, .research-item {
             margin-bottom: 2rem;
             padding-bottom: 2rem;
@@ -224,7 +217,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Contact Section */
         .contact {
             text-align: center;
         }
@@ -238,7 +230,6 @@
             text-decoration: underline;
         }
 
-        /* Footer */
         footer {
             background-color: var(--text-color);
             color: white;
@@ -247,7 +238,6 @@
             margin-top: 4rem;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 flex-wrap: wrap;
@@ -290,113 +280,121 @@
     </section>
 
     <main class="content">
-        <!-- About Section -->
         <section id="about" class="section active">
             <h2>About Me</h2>
             <div class="about-content">
-                <p>I am <strong>Richard Owusu-Ansah</strong>, a <strong>Geographer</strong>, <strong>Geospatial Data Scientist</strong>, and <strong>Researcher</strong> currently pursuing a Master of Science in <strong>Geography and Environment</strong> at <strong>The George Washington University</strong>. My research focuses on <strong>environmental predictive modeling</strong>, <strong>urban heat islands</strong>, <strong>carbon dynamics</strong>, and <strong>flood risk assessment</strong>, utilizing <strong>GIS</strong> and <strong>geospatial programming</strong> to analyze environmental challenges and inform sustainable solutions.</p>
-                <p>With expertise in <strong>Python</strong>, <strong>ArcGIS</strong>, <strong>QGIS</strong>, and <strong>geospatial analysis</strong>, I have worked on projects exploring <strong>land cover change</strong>, <strong>illegal mining impacts</strong>, and <strong>climate change adaptation</strong> strategies. I am particularly interested in using <strong>spatial models</strong> to better understand the interactions between urban environments, <strong>carbon emissions</strong>, and <strong>climate risks</strong>, aiming to enhance urban resilience to environmental stressors.</p>
-                <p>Feel free to explore my work below, and feel free to contact me if you're interested in collaboration or further discussion.</p>
+                <p>I am Richard Owusu-Ansah, a Geographer, Geospatial Data Scientist, and Researcher pursuing a Master of Science in Geography and Environment at The George Washington University. My research focuses on environmental predictive modeling, urban heat islands, carbon dynamics, and flood risk assessment, utilizing GIS and geospatial programming to analyze environmental challenges and inform sustainable solutions.</p>
+                <p>With expertise in Python, ArcGIS, QGIS, and geospatial analysis, I have worked on projects exploring land cover change, illegal mining impacts, and climate change adaptation strategies. I am particularly interested in using spatial models to better understand the interactions between urban environments, carbon emissions, and climate risks, aiming to enhance urban resilience to environmental stressors.</p>
+                <p>Currently, I serve as a Graduate Teaching Assistant, facilitating Physical Geography lab sessions at The George Washington University, helping students understand key geographical concepts through hands-on learning and practical exercises.</p>
             </div>
         </section>
 
-        <!-- Education Section -->
         <section id="education" class="section">
             <h2>Education</h2>
             <div class="education-item">
                 <h3>The George Washington University</h3>
-                <p><strong>Master of Science in Geography and Environmental Science</strong></p>
-                <p><em>Expected Graduation: 2025</em></p>
+                <p class="degree">Master of Science in Geography and Environment | Certificate in GIS</p>
+                <p class="date">August 2023 - Present</p>
+                <p class="details">Relevant Coursework: Geospatial Programming (Python), GIS, Geospatial Statistics and Climate Change</p>
             </div>
             <div class="education-item">
-                <h3>Kwame Nkrumah University of Science and Technology</h3>
-                <p><strong>MPhil in Planning, Monitoring, and Evaluation</strong></p>
-                <p><em>Graduated: 2021</em></p>
+                <h3>University of Education, Winneba, Ghana</h3>
+                <p class="degree">Bachelor of Arts in Geography | Minor in Economics</p>
+                <p class="date">August 2016 - July 2020</p>
+                <p class="details">Relevant Coursework: Soils and Biogeography, Geomorphology, and Environment and Society</p>
             </div>
         </section>
 
-        <!-- Research Section -->
         <section id="research" class="section">
-            <h2>Research</h2>
+            <h2>Research Experience</h2>
             <div class="research-item">
-                <h3>Urban Heat Islands and Flood Risk Assessment</h3>
-                <p>I use <strong>GIS</strong> and <strong>spatial analysis</strong> to assess the impact of <strong>urban heat islands</strong> and flooding in urban areas, providing actionable insights for city planners to enhance climate resilience.</p>
+                <h3>Masters Thesis: Advancing Flood Risk Prediction through Geospatial Modeling</h3>
+                <p class="institution">The George Washington University</p>
+                <p class="date">August 2024 - Present</p>
+                <ul>
+                    <li>Developing comprehensive geospatial flood models for the Greater Boston Area</li>
+                    <li>Utilizing ArcGIS Pro and Python's Arcpy module for spatial analyses</li>
+                    <li>Integrating social vulnerability data with flood risk assessments</li>
+                </ul>
             </div>
             <div class="research-item">
-                <h3>Geospatial Modeling of Carbon Dynamics</h3>
-                <p>Through remote sensing and <strong>geospatial modeling</strong>, I analyze the dynamics of <strong>carbon flux</strong> in urban landscapes to inform policies aimed at mitigating <strong>climate change</strong> and promoting <strong>sustainable development</strong>.</p>
+                <h3>Land Cover Change Dynamics and Socioeconomic Drivers</h3>
+                <p class="date">Current Research</p>
+                <ul>
+                    <li>Analyzing multi-temporal satellite imagery for land cover change detection</li>
+                    <li>Implementing machine learning algorithms for land cover classification</li>
+                    <li>Assessing socioeconomic drivers of illegal mining activities</li>
+                </ul>
             </div>
         </section>
 
-        <!-- Maps Section -->
         <section id="maps" class="section">
             <h2>Maps & GIS Projects</h2>
             <div class="maps-grid">
                 <div class="map-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Map Example 1">
+                    <img src="/api/placeholder/400/300" alt="Black Bear Distribution Map">
                     <div class="map-info">
-                        <h3>Flood Risk Model - Greater Boston Area</h3>
-                        <p>This model integrates <strong>climate projections</strong> with <strong>physical data</strong> to assess flood risk across the Greater Boston Area, aiming to improve FEMA flood maps.</p>
+                        <h3>Black Bear Current Distribution</h3>
+                        <p>A detailed analysis and visualization of current Black Bear distribution patterns across various regions.</p>
                         <div class="map-tags">
-                            <span class="tag">Flood Risk</span>
-                            <span class="tag">Climate Change</span>
-                            <span class="tag">GIS</span>
+                            <span class="tag">Species Distribution</span>
+                            <span class="tag">Wildlife</span>
+                            <span class="tag">GIS Analysis</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="map-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Map Example 2">
+                    <img src="/api/placeholder/400/300" alt="Greater Sage-Grouse Distribution Map">
                     <div class="map-info">
-                        <h3>Urban Heat Island Study</h3>
-                        <p>This project uses satellite imagery and <strong>spatial analysis</strong> to map and model <strong>urban heat islands</strong> in metropolitan areas.</p>
+                        <h3>Greater Sage-Grouse Distribution</h3>
+                        <p>Spatial analysis showing the current distribution of Greater Sage-Grouse populations and their habitats.</p>
                         <div class="map-tags">
-                            <span class="tag">Urban Heat Island</span>
-                            <span class="tag">Climate Change</span>
-                            <span class="tag">GIS</span>
+                            <span class="tag">Species Distribution</span>
+                            <span class="tag">Bird Habitat</span>
+                            <span class="tag">GIS Analysis</span>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="storymap-container">
+                <h2>My Journey StoryMap</h2>
+                <iframe 
+                    class="storymap-frame"
+                    src="https://uploads.knightlab.com/storymapjs/ea97281a5de950bdaeec1d3bd4e2114b/from-ghana-to-the-us-a-journey-of-struggle-perseverance-and-triumph/index.html"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="section">
-            <h2>Skills</h2>
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Geospatial Analysis</h3>
-                    <ul>
-                        <li>ArcGIS Pro</li>
-                        <li>QGIS</li>
-                        <li>PostGIS</li>
-                        <li>Spatial Analysis</li>
-                        <li>Geospatial Statistics</li>
-                    </ul>
+                    <h3>GIS Software</h3>
+                    <p>ArcGIS Pro, ArcGIS Online, Survey123, StoryMaps, Field Maps, QGIS, Google Earth</p>
                 </div>
                 <div class="skill-category">
                     <h3>Programming</h3>
-                    <ul>
-                        <li>Python (Beginner)</li>
-                        <li>R (Beginner)</li>
-                        <li>ArcPy</li>
-                        <li>SQL</li>
-                    </ul>
+                    <p>Python (Geospatial Programming), R</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Research & Analysis</h3>
-                    <ul>
-                        <li>Climate Change Modeling</li>
-                        <li>Flood Risk Assessment</li>
-                        <li>Environmental Data Analysis</li>
-                    </ul>
+                    <h3>Data Visualization</h3>
+                    <p>Matplotlib, Seaborn, ArcGIS, Geoda</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Geospatial Techniques</h3>
+                    <p>Spatial Analysis, Hydrological Modeling, Predictive Modeling, Hotspot Analysis, Land Cover Change Detection</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me via <a href="mailto:richard@example.com">email</a> or connect with me on <a href="https://www.linkedin.com/in/richardowusuansah">LinkedIn</a>.</p>
+            <h2>Get in Touch</h2>
+            <p>Email: <a href="mailto:richard.owusuansah@gwmail.gwu.edu">richard.owusuansah@gwmail.gwu.edu</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/richardoa1295" target="_blank">linkedin.com/in/richardoa1295</a></p>
+            <p>Location: Silver Spring, MD</p>
         </section>
     </main>
 
@@ -406,20 +404,21 @@
 
     <script>
         function showSection(sectionId) {
-            // Remove 'active' class from all sections
+            // Hide all sections
             document.querySelectorAll('.section').forEach(section => {
                 section.classList.remove('active');
             });
-
-            // Add 'active' class to the clicked section
+            
+            // Show selected section
             document.getElementById(sectionId).classList.add('active');
-
-            // Update navbar link active state
+            
+            // Update active nav link
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.classList.remove('active');
             });
-            document.querySelector(`.nav-links a[onclick="showSection('${sectionId}')"]`).classList.add('active');
+            event.target.classList.add('active');
         }
     </script>
 </body>
 </html>
+        
