@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
@@ -16,7 +16,36 @@
             background-color: #007acc;
             color: white;
             text-align: center;
-            padding: 1rem 0;
+            padding: 2rem 0;
+        }
+        main {
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 2rem;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #007acc;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -26,7 +55,25 @@
         <p>Geographer | Geospatial Data Scientist | Aspiring PhD Researcher</p>
     </header>
     <main>
-        <p>If you can see this text, the page is loading correctly.</p>
+        <section>
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I specialize in GIS, environmental predictive modeling, land use/land use analysis, carbon monitoring and urban climate research.</p>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Flood Risk Analysis using ArcGIS Pro</a></li>
+                <li><a href="#">Python-Based Vulnerability Index Model</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">LinkedIn Profile</a></p>
+        </section>
     </main>
+    <footer>
+        <p>© 2024 Richard Owusu-Ansah</p>
+    </footer>
 </body>
 </html>
