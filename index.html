@@ -343,11 +343,16 @@
 
         <!-- Maps Section -->
       <!-- Maps Section -->
+[Previous code remains the same until the Maps section]
+
+<!-- Replace the Maps Section with this -->
 <section id="maps" class="section">
     <h2>Maps & GIS Projects</h2>
     <div class="maps-grid">
         <div class="map-card">
-            <img src="../images/Map1.jpg" alt="Black Bear Distribution Map" style="max-width: 100%;">
+            <div class="map-image-container">
+                <img src="images/Map1.jpg" alt="Black Bear Distribution Map">
+            </div>
             <div class="map-info">
                 <h3>Black Bear Current Distribution</h3>
                 <p>A detailed analysis and visualization of current Black Bear distribution patterns across various regions.</p>
@@ -360,7 +365,9 @@
         </div>
 
         <div class="map-card">
-            <img src="../images/Map2.jpg" alt="Greater Sage-Grouse Distribution Map" style="max-width: 100%;">
+            <div class="map-image-container">
+                <img src="images/Map2.jpg" alt="Greater Sage-Grouse Distribution Map">
+            </div>
             <div class="map-info">
                 <h3>Greater Sage-Grouse Distribution</h3>
                 <p>Spatial analysis showing the current distribution of Greater Sage-Grouse populations and their habitats.</p>
@@ -373,7 +380,107 @@
         </div>
     </div>
 </section>
-        
+
+<!-- Add new StoryMap Section -->
+<section id="storymap" class="section">
+    <h2>My Journey StoryMap</h2>
+    <div class="storymap-link-container">
+        <p>Explore my journey from Ghana to the United States through an interactive StoryMap:</p>
+        <a href="https://uploads.knightlab.com/storymapjs/ea97281a5de950bdaeec1d3bd4e2114b/from-ghana-to-the-us-a-journey-of-struggle-perseverance-and-triumph/index.html" 
+           target="_blank" 
+           class="storymap-link">
+            View My Journey StoryMap <span class="arrow">→</span>
+        </a>
+    </div>
+</section>
+
+[Previous code continues with Skills section]
+
+<!-- Add these new styles to your existing CSS -->
+<style>
+/* Update Maps Styling */
+.map-image-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.map-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.map-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.maps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* StoryMap Link Styling */
+.storymap-link-container {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.storymap-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.storymap-link:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.storymap-link:hover .arrow {
+    transform: translateX(5px);
+}
+</style>
+
+<!-- Update navigation to include StoryMap -->
+<nav class="navbar">
+    <div class="nav-links">
+        <a onclick="showSection('about')" class="active">About</a>
+        <a onclick="showSection('education')">Education</a>
+        <a onclick="showSection('research')">Research</a>
+        <a onclick="showSection('maps')">Maps & GIS</a>
+        <a onclick="showSection('storymap')">StoryMap</a>
+        <a onclick="showSection('skills')">Skills</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </div>
+</nav>
+
         <!-- Skills Section -->
         <section id="skills" class="section">
             <h2>Technical Skills</h2>
