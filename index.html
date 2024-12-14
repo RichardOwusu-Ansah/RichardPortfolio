@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richard Owusu-Ansah - Portfolio</title>
     <style>
-        /* Base Styles */
         :root {
             --primary-color: #2563eb;
             --secondary-color: #1e40af;
@@ -25,31 +24,6 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--bg-color);
-        }
-
-        /* Typography */
-        h1, h2, h3 {
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            font-size: 2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        h3 {
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        strong {
-            color: var(--primary-color);
         }
 
         /* Navigation */
@@ -78,11 +52,17 @@
             padding: 0.5rem 1rem;
             border-radius: 4px;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .nav-links a:hover {
             color: var(--primary-color);
             background-color: #f0f9ff;
+        }
+
+        .nav-links a.active {
+            color: white;
+            background-color: var(--primary-color);
         }
 
         /* Hero Section */
@@ -111,70 +91,61 @@
             opacity: 0.9;
         }
 
-        /* Main Content */
+        /* Content Sections */
         .content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
 
-        .content section {
+        .section {
+            display: none;
             margin-bottom: 4rem;
             background-color: var(--card-bg);
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            animation: fadeIn 0.5s ease-in-out;
         }
 
-        /* Education Section */
-        .education-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e5e7eb;
+        .section.active {
+            display: block;
         }
 
-        .education-item:last-child {
-            border-bottom: none;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .degree {
+        /* Section Styles */
+        h2 {
             color: var(--primary-color);
-            font-weight: 500;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
         }
 
-        .date {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Research Section */
-        .research-item {
+        .education-item, .research-item {
             margin-bottom: 2rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid #e5e7eb;
         }
 
-        .research-item:last-child {
+        .education-item:last-child, .research-item:last-child {
             border-bottom: none;
         }
 
-        .research-item ul {
-            list-style-position: inside;
-            margin-top: 1rem;
-        }
-
-        .research-item li {
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
-        }
-
-        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
 
         .skill-category {
@@ -187,7 +158,6 @@
         .skill-category h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
-            font-size: 1.2rem;
         }
 
         /* Contact Section */
@@ -216,17 +186,11 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
-                flex-direction: column;
-                align-items: center;
-                padding: 1rem;
+                flex-wrap: wrap;
             }
 
             .hero h1 {
                 font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
             }
 
             .content {
@@ -242,11 +206,11 @@
 <body>
     <nav class="navbar">
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#research">Research</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a onclick="showSection('about')" class="active">About</a>
+            <a onclick="showSection('education')">Education</a>
+            <a onclick="showSection('research')">Research</a>
+            <a onclick="showSection('skills')">Skills</a>
+            <a onclick="showSection('contact')">Contact</a>
         </div>
     </nav>
 
@@ -257,18 +221,16 @@
     </section>
 
     <main class="content">
-        <section id="about">
+        <section id="about" class="section active">
             <h2>About Me</h2>
             <div class="about-content">
                 <p>I am <strong>Richard Owusu-Ansah</strong>, a <strong>Geographer</strong>, <strong>Geospatial Data Scientist</strong>, and <strong>Researcher</strong> currently pursuing a Master of Science in <strong>Geography and Environment</strong> at <strong>The George Washington University</strong>. My research focuses on <strong>environmental predictive modeling</strong>, <strong>urban heat islands</strong>, <strong>carbon dynamics</strong>, and <strong>flood risk assessment</strong>, utilizing <strong>GIS</strong> and <strong>geospatial programming</strong> to analyze environmental challenges and inform sustainable solutions.</p>
-                
                 <p>With expertise in <strong>Python</strong>, <strong>ArcGIS</strong>, <strong>QGIS</strong>, and <strong>geospatial analysis</strong>, I have worked on projects exploring <strong>land cover change</strong>, <strong>illegal mining impacts</strong>, and <strong>climate change adaptation</strong> strategies. I am particularly interested in using <strong>spatial models</strong> to better understand the interactions between urban environments, <strong>carbon emissions</strong>, and <strong>climate risks</strong>, aiming to enhance urban resilience to environmental stressors.</p>
-                
                 <p>Currently, as a <strong>Graduate Teaching Assistant</strong>, I facilitate <strong>Physical Geography lab sessions</strong> at <strong>The George Washington University</strong>, helping students understand key geographical concepts through hands-on learning and practical exercises.</p>
             </div>
         </section>
 
-        <section id="education">
+        <section id="education" class="section">
             <h2>Education</h2>
             <div class="education-item">
                 <h3>The George Washington University</h3>
@@ -284,32 +246,30 @@
             </div>
         </section>
 
-        <section id="research">
+        <section id="research" class="section">
             <h2>Research Experience</h2>
             <div class="research-item">
                 <h3>Masters Thesis: Advancing Flood Risk Prediction through Geospatial Modeling</h3>
                 <p class="institution">The George Washington University</p>
                 <p class="date">August 2024 - Present</p>
                 <ul>
-                    <li>Developing comprehensive geospatial flood models for the Greater Boston Area using ArcGIS Pro and Python's Arcpy module</li>
-                    <li>Leveraging DEM for slope analysis and hydrological modeling to map flood-prone areas</li>
-                    <li>Integrating social vulnerability data to estimate vulnerable populations within high flood risk zones</li>
-                    <li>Utilizing property value data to estimate potential economic losses in high flood risk zones</li>
+                    <li>Developing comprehensive geospatial flood models for the Greater Boston Area</li>
+                    <li>Utilizing ArcGIS Pro and Python's Arcpy module for spatial analyses</li>
+                    <li>Integrating social vulnerability data with flood risk assessments</li>
                 </ul>
             </div>
             <div class="research-item">
                 <h3>Land Cover Change Dynamics and Socioeconomic Drivers</h3>
-                <p class="institution">Current Research</p>
-                <p class="date">2023 - Present</p>
+                <p class="date">Current Research</p>
                 <ul>
-                    <li>Assessing land cover changes related to illegal mining using remote sensing and statistical approaches</li>
-                    <li>Comparing multiple machine learning algorithms for accurate land cover classification</li>
-                    <li>Analyzing intensity of land cover changes across political administrations</li>
+                    <li>Analyzing multi-temporal satellite imagery for land cover change detection</li>
+                    <li>Implementing machine learning algorithms for land cover classification</li>
+                    <li>Assessing socioeconomic drivers of illegal mining activities</li>
                 </ul>
             </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="section">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
@@ -322,7 +282,7 @@
                 </div>
                 <div class="skill-category">
                     <h3>Data Visualization</h3>
-                    <p>Matplotlib, Seaborn, ArcGIS, Geoda, Interactive Mapping</p>
+                    <p>Matplotlib, Seaborn, ArcGIS, Geoda</p>
                 </div>
                 <div class="skill-category">
                     <h3>Geospatial Techniques</h3>
@@ -331,7 +291,7 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="section">
             <h2>Get in Touch</h2>
             <p>Email: <a href="mailto:richard.owusuansah@gwmail.gwu.edu">richard.owusuansah@gwmail.gwu.edu</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/richardoa1295" target="_blank">linkedin.com/in/richardoa1295</a></p>
@@ -342,5 +302,23 @@
     <footer>
         <p>&copy; 2024 Richard Owusu-Ansah. All rights reserved.</p>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
