@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richard Owusu-Ansah - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #2563eb;
@@ -20,7 +22,7 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Lato', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--bg-color);
@@ -69,13 +71,14 @@
         .hero {
             padding: 8rem 2rem 4rem;
             text-align: center;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
         }
 
         .hero p {
@@ -173,6 +176,7 @@
             font-size: 0.875rem;
         }
 
+        /* StoryMap Section */
         .storymap-container {
             margin-top: 4rem;
         }
@@ -193,19 +197,51 @@
             margin-bottom: 2rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--primary-color);
+            font-family: 'Poppins', sans-serif;
         }
 
-        /* Additional Sections Styling */
-        .education-item, .research-item {
+        /* About Section */
+        .about-content {
+            line-height: 1.8;
+        }
+
+        .resume-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .resume-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Research Section */
+        .research-item {
             margin-bottom: 2rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid #e5e7eb;
         }
 
-        .education-item:last-child, .research-item:last-child {
+        .research-item:last-child {
             border-bottom: none;
         }
 
+        .research-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .research-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -278,6 +314,7 @@
             <a onclick="showSection('education')">Education</a>
             <a onclick="showSection('research')">Research</a>
             <a onclick="showSection('maps')">Maps & GIS</a>
+            <a onclick="showSection('storymap')">StoryMap</a>
             <a onclick="showSection('skills')">Skills</a>
             <a onclick="showSection('contact')">Contact</a>
         </div>
@@ -297,6 +334,9 @@
                 <p>I am Richard Owusu-Ansah, a Geographer, Geospatial Data Scientist, and Researcher currently pursuing a Master of Science in Geography and Environment at The George Washington University. My research focuses on environmental predictive modeling, urban heat islands, carbon dynamics, and flood risk assessment, utilizing GIS and geospatial programming to analyze environmental challenges and inform sustainable solutions.</p>
                 <p>With expertise in Python, ArcGIS, QGIS, and geospatial analysis, I have worked on projects exploring land cover change, illegal mining impacts, and climate change adaptation strategies. I am particularly interested in using spatial models to better understand the interactions between urban environments, carbon emissions, and climate risks, aiming to enhance urban resilience to environmental stressors.</p>
                 <p>Currently, as a <strong>Graduate Teaching Assistant</strong>, I facilitate Physical Geography lab sessions at The George Washington University, helping students understand key geographical concepts through hands-on learning and practical exercises.</p>
+                <a href="images/Resume.pdf" download="Richard_Owusu-Ansah_Resume.pdf" class="resume-button">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
             </div>
         </section>
 
@@ -338,144 +378,58 @@
                     <li>Implementing machine learning algorithms for land cover classification</li>
                     <li>Assessing socioeconomic drivers of illegal mining activities</li>
                 </ul>
+                <p>Read my publication: <a href="images/Writing Sample.pdf" target="_blank">Writing Sample</a></p>
             </div>
         </section>
 
         <!-- Maps Section -->
-      <!-- Maps Section -->
+        <section id="maps" class="section">
+            <h2>Maps & GIS Projects</h2>
+            <div class="maps-grid">
+                <div class="map-card">
+                    <div class="map-image-container">
+                        <img src="images/Map1.jpg" alt="Black Bear Distribution Map">
+                    </div>
+                    <div class="map-info">
+                        <h3>Black Bear Current Distribution</h3>
+                        <p>A detailed analysis and visualization of current Black Bear distribution patterns across various regions.</p>
+                        <div class="map-tags">
+                            <span class="tag">Species Distribution</span>
+                            <span class="tag">Wildlife</span>
+                            <span class="tag">GIS Analysis</span>
+                        </div>
+                    </div>
+                </div>
 
-<section id="maps" class="section">
-    <h2>Maps & GIS Projects</h2>
-    <div class="maps-grid">
-        <div class="map-card">
-            <div class="map-image-container">
-                <img src="images/Map1.jpg" alt="Black Bear Distribution Map">
-            </div>
-            <div class="map-info">
-                <h3>Black Bear Current Distribution</h3>
-                <p>A detailed analysis and visualization of current Black Bear distribution patterns across various regions.</p>
-                <div class="map-tags">
-                    <span class="tag">Species Distribution</span>
-                    <span class="tag">Wildlife</span>
-                    <span class="tag">GIS Analysis</span>
+                <div class="map-card">
+                    <div class="map-image-container">
+                        <img src="images/Map2.jpg" alt="Greater Sage-Grouse Distribution Map">
+                    </div>
+                    <div class="map-info">
+                        <h3>Greater Sage-Grouse Distribution</h3>
+                        <p>Spatial analysis showing the current distribution of Greater Sage-Grouse populations and their habitats.</p>
+                        <div class="map-tags">
+                            <span class="tag">Species Distribution</span>
+                            <span class="tag">Bird Habitat</span>
+                            <span class="tag">GIS Analysis</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="map-card">
-            <div class="map-image-container">
-                <img src="images/Map2.jpg" alt="Greater Sage-Grouse Distribution Map">
+        <!-- StoryMap Section -->
+        <section id="storymap" class="section">
+            <h2>My Journey StoryMap</h2>
+            <div class="storymap-link-container">
+                <p>Explore the journey of a Ghanaian migrant from Ghana to the United States through an interactive StoryMap:</p>
+                <a href="https://uploads.knightlab.com/storymapjs/ea97281a5de950bdaeec1d3bd4e2114b/from-ghana-to-the-us-a-journey-of-struggle-perseverance-and-triumph/index.html" 
+                   target="_blank" 
+                   class="storymap-link">
+                    View My StoryMap <span class="arrow">→</span>
+                </a>
             </div>
-            <div class="map-info">
-                <h3>Greater Sage-Grouse Distribution</h3>
-                <p>Spatial analysis showing the current distribution of Greater Sage-Grouse populations and their habitats.</p>
-                <div class="map-tags">
-                    <span class="tag">Species Distribution</span>
-                    <span class="tag">Bird Habitat</span>
-                    <span class="tag">GIS Analysis</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Add new StoryMap Section -->
-<section id="storymap" class="section">
-    <h2>My Journey StoryMap</h2>
-    <div class="storymap-link-container">
-        <p>Explore the journey of a Ghanaian migrant from Ghana to the United States through an interactive StoryMap:</p>
-        <a href="https://uploads.knightlab.com/storymapjs/ea97281a5de950bdaeec1d3bd4e2114b/from-ghana-to-the-us-a-journey-of-struggle-perseverance-and-triumph/index.html" 
-           target="_blank" 
-           class="storymap-link">
-            View My StoryMap <span class="arrow">→</span>
-        </a>
-    </div>
-</section>
-
-<!-- Add these new styles to your existing CSS -->
-<style>
-/* Update Maps Styling */
-.map-image-container {
-    width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px 8px 0 0;
-}
-
-.map-image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-.map-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-}
-
-.maps-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-/* StoryMap Link Styling */
-.storymap-link-container {
-    text-align: center;
-    padding: 2rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.storymap-link {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 1rem 2rem;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.storymap-link:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-}
-
-.arrow {
-    display: inline-block;
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.storymap-link:hover .arrow {
-    transform: translateX(5px);
-}
-</style>
-
-<!-- Update navigation to include StoryMap -->
-<nav class="navbar">
-    <div class="nav-links">
-        <a onclick="showSection('about')" class="active">About</a>
-        <a onclick="showSection('education')">Education</a>
-        <a onclick="showSection('research')">Research</a>
-        <a onclick="showSection('maps')">Maps & GIS</a>
-        <a onclick="showSection('storymap')">StoryMap</a>
-        <a onclick="showSection('skills')">Skills</a>
-        <a onclick="showSection('contact')">Contact</a>
-    </div>
-</nav>
+        </section>
 
         <!-- Skills Section -->
         <section id="skills" class="section">
